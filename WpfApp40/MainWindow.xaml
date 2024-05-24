@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp40.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp40"
+        mc:Ignorable="d"
+        Title="Пульсар" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Slider Name="scaleSlider" Grid.Row="0" Minimum="1" Maximum="2" Value="1" Width="300" TickFrequency="0.1" TickPlacement="BottomRight" 
+                HorizontalContentAlignment="Center" VerticalAlignment="Center" IsSnapToTickEnabled="True" />
+       
+
+        <Ellipse x:Name="pulseEllipse" Width="200" Height="200" Grid.Row="1">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="Yellow" Offset="0.5"/>
+                    <GradientStop Color="Green" Offset="1"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+    </Grid>
+</Window>
